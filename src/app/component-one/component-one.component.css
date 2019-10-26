@@ -1,0 +1,15 @@
+.component-one{
+border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px;
+  position: center;
+}
+
+.old{
+  color: red;
+}
+
+.young{
+  color:blue;
+}
