@@ -1,7 +1,7 @@
 <div class="component-one">
   <h1>{{person.name}} {{person.lastName}} {{person.surName}}</h1>
-  <div class="age" [class]="person.age>30 ? 'old': 'young'">{{person.age}}</div>
+  <div class="age" [class]="person.age<30 ? 'old': 'young'">{{person.age}}</div>
   <label>{{person.clickEvent}}</label>
-  <button (click)="testClick($event)" [disabled]="!person.showButton">lol</button>
+  <button (click)="testClick()" [disabled]="!person.showButton">lol</button>
 </div>
 

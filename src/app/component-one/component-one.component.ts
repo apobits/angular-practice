@@ -17,8 +17,9 @@ export class ComponentOneComponent implements OnInit {
     this.person = new Person('Albin', 'Perez', 'Ortiz', 37, '', true);
   }
 
-  testClick(event) {
-    this.person.clickEvent = event;
+  testClick() {
+    console.log('Entered testClick method');
+    this.person.clickEvent = 'Testing';
     this.person.showButton = !this.person.showButton;
   }
 
