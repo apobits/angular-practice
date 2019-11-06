@@ -1,16 +1,4 @@
-.big-letter {
-  font-size: large;
-}
-
-.aggressive {
-  color: red;
-}
-
-.passive {
-  color: blue;
-}
-
-.div-border{
+.ng-if{
   border: 1px solid black;
   border-radius: 5px;
   display: inline-block;

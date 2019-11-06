@@ -1,0 +1,14 @@
+<div class="div-border">
+  <ng-form>
+    <label for="letterValue">Letter Value: </label>
+    <input [value]="letter" id="letterValue" name="letterValue" type="text"/>
+    <button (click)="updateLetter()"></button>
+  </ng-form>
+  <div [ngSwitch]="letter">
+    <p *ngSwitchCase="'Hello'">Hello section</p>
+    <p *ngSwitchCase="'World'">World section</p>
+    <p *ngSwitchCase="'!!!'">!!! section</p>
+    <p *ngSwitchDefault>default section</p>
+  </div>
+</div>
+

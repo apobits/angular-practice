@@ -9,3 +9,11 @@
 .passive {
   color: blue;
 }
+
+.style-binding{
+  border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px;
+  position: center;
+}
