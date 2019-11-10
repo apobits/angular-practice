@@ -11,6 +11,8 @@ import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import {FormsModule} from '@angular/forms';
+import { InlineTemplateComponent } from './inline-template/inline-template.component';
+import { InlineStyleComponent } from './inline-style/inline-style.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import {FormsModule} from '@angular/forms';
     StyleBindingComponent,
     NgIfComponent,
     NgForComponent,
-    NgSwitchComponent
+    NgSwitchComponent,
+    InlineTemplateComponent,
+    InlineStyleComponent
   ],
   imports: [
     BrowserModule,
