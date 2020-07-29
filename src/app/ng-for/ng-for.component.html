@@ -1,3 +1,6 @@
-<div class="div-border" *ngFor="let letter of letters; index as i, even as even, odd as odd, first as first, last as last">
-  <label>{{letter}} is at index {{i}} odd: {{odd}} even: {{even}} first: {{first}} last: {{last}}</label>
+<!--use trackBy when you are reloading the elements of the array from the server side to improve performance-->
+<div class="div-border"
+     *ngFor="let person of persons; index as i; even as even; odd as odd; first as first; last as last; trackBy:personIdentity">
+  <label>{{person.name}} is at index {{i}} odd: {{odd}} even: {{even}} first: {{first}} last: {{last}}</label>
 </div>
+<button (click)="reload()">Press me</button>

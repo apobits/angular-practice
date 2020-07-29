@@ -15,11 +15,12 @@ export class NgStyleComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cssStyle = {'font-size': this.changeFlag ? 'large' : 'small'};
+    this.updateFlag();
   }
 
   updateFlag() {
     this.changeFlag = !this.changeFlag;
+    this.cssStyle = {'font-size': this.changeFlag ? 'large' : 'small'};
   }
 
 }

@@ -1,6 +1,7 @@
 <div class="style-binding">
-<section>
-  <p class="big-letter" [class.aggressive]="flag" [class.passive]="!flag">style-binding works!</p>
-  <button (click)="updateFlag()">Press me!!!</button>
-</section>
+  <section>
+    <!--    this way of changing a css attribute preserves the classes on the element-->
+    <p class="big-letter" [style.font-size]="flag?'large':'small'">style-binding works!</p>
+    <button (click)="updateFlag()">Press me!!!</button>
+  </section>
 </div>

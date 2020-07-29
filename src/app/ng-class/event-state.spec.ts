@@ -2,6 +2,6 @@ import { EventState } from './event-state';
 
 describe('EventState', () => {
   it('should create an instance', () => {
-    expect(new EventState()).toBeTruthy();
+    expect(new EventState(true)).toBeTruthy();
   });
 });

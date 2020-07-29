@@ -13,6 +13,7 @@ export class NgIfComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.flag = true;
   }
 
   changeFlag() {

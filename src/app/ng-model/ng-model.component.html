@@ -1,0 +1,40 @@
+<p>ng-model works!</p>
+<form (ngSubmit)="createPersonLog()" #personForm="ngForm">
+  <h1>Create Person</h1>
+  <div>
+    <label for="personName">Enter your name</label>
+    <input [value]="person.name" (input)="person.name=$event.target.value" name="personName" id="personName"
+           type="text" required="true"/>
+  </div>
+  <div *ngIf="personLastNameModel.errors">Last Name is mandatory</div>
+  <div class="person-name">
+    <label for="personLastName">Enter your last name</label>
+    <input [ngModel]="person.lastName" (ngModelChange)="person.lastName=$event" name="personLastName"
+           id="personLastName" type="text" required="true" #personLastNameModel="ngModel"/>
+  </div>
+  <div *ngIf="idError">{{idError}}</div>
+  <div class="person-view">
+    <label for="personId">Enter your id</label>
+    <input [(ngModel)]="person.id" name="personId" id="personId" type="number" required="true" #personIdModel="ngModel"
+           (change)="updateError(personIdModel)">
+  </div>
+  <div>
+    <label for="idType1">Select yor identification type</label>
+    <input type="radio" [(ngModel)]="person.idType" name="idType" id="idType1" value="CC">CC
+    <input type="radio" [(ngModel)]="person.idType" name="idType" id="idType2" value="NIT">NIT
+  </div>
+  <div class="person-select">
+    <label for="idType1">Select yor identification type</label>
+    <select name="idTypes" [(ngModel)]="person.idType">
+      <option *ngFor="let idType of idTypes" [ngValue]="idType">{{idType}}</option>
+    </select>
+  </div>
+  <div>
+    <input type="checkbox" [(ngModel)]="consent" name="consent">Me {{person.name}} allow you to process my personal
+    information
+  </div>
+
+  <button type="submit">Create person</button>
+</form>
+<p>Hello {{person.name}} {{person.lastName}} your id is {{person.id}}</p>
+

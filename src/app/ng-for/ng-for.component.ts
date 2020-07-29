@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Person} from './person';
+import {log} from 'util';
 
 @Component({
   selector: 'app-ng-for',
@@ -7,13 +9,25 @@ import {Component, OnInit} from '@angular/core';
 })
 export class NgForComponent implements OnInit {
 
-  public letters: Array<string>;
+  public persons: Array<Person>;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.letters = ['Hello', 'World', '!!!'];
+    console.log('testing');
+    this.persons = [new Person(1, 'Albin', 'Perez'),
+      new Person(2, 'Danna', 'Perez'),
+      new Person(3, 'Marcela', 'Castro')];
+  }
+
+  personIdentity(person: Person) {
+    console.log(person.id);
+    return person.id;
+  }
+
+  reload() {
+    this.persons.concat(new Person(4, 'Nidia', 'Ortiz'));
   }
 
 }

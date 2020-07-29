@@ -1,0 +1,10 @@
+<p>ng-model-group works!</p>
+<form (ngSubmit)="createPerson(formObject)" #formObject="ngForm">
+  <div ngModelGroup="person">
+    <input type="text" name="name" ngModel>
+    <input type="text" name="lastName" ngModel>
+    <input type="number" name="id" ngModel>
+    <input type="text" name="idType" ngModel>
+  </div>
+  <button type="submit">Create Person</button>
+</form>

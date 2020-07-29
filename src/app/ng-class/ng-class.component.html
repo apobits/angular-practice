@@ -1,5 +1,6 @@
 <div class="div-border">
-<section>
+  <section>
+    <!--    ng class directive respects the classes on the element-->
     <div class="ng-class"
          [ngClass]="{large:eventState.largeFont, small:eventState.largeFont, 'color-large':eventState.largeFont, 'color-small':eventState.largeFont}">
 
@@ -9,5 +10,15 @@
 
       <button (click)="changeLook()"> Press me!!!</button>
     </div>
-</section>
+
+    <div class="personalized-font-style"
+         [ngClass]=cssClass>
+
+      <p>{{text}}</p>
+
+      <p> {{rule}}</p>
+
+      <button (click)="changeLook()"> Press me!!!</button>
+    </div>
+  </section>
 </div>

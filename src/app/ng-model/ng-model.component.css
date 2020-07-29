@@ -1,0 +1,8 @@
+.person-name .ng-valid, .person-view .ng-touched, .person-select .ng-dirty {
+  background-color: green;
+}
+
+.person-name ng-invalid, .person-view .ng-untouched, .person-select .ng-pristine {
+  background-color: yellow;
+}
+
